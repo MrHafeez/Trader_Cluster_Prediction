@@ -142,7 +142,7 @@ if submit:
 
     scaled = scaler.transform(input_df)
     reduced = pca.transform(scaled)
-    cluster = kmeans.predict(scaled)[0]
+    cluster = kmeans.predict(reduced)[0]
 
     st.success(f"Predicted Cluster: {cluster} — {cluster_names.get(cluster, 'Unknown')}")
 
